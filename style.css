@@ -1,0 +1,186 @@
+body {
+    height: 300vh;
+    background-color: #5a78a5;
+    background-size: cover;
+    background-position: center;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1rem;
+}
+
+a:hover {
+    color: blue;
+}
+
+/* HEADER CODE */
+header {
+    position: relative; 
+    padding: 0 2rem; 
+}
+
+.navbar1 {
+    width: 100%;
+    height: 60px; 
+    max-width: 1200px;
+    margin: 0 auto; 
+    display: flex; 
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.navbar1 .logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar1 .links {
+    display: flex;
+    gap: 2rem; 
+}
+
+.navbar1 .toggle_button {
+    color: black;
+    font-size: 1.5rem;
+    cursor: pointer; 
+    display: none; 
+}
+
+.action_button {
+    background-color: orange;
+    color: black;
+    padding: 0.5rem 1rem;
+    border: none; 
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+} 
+
+.action_button:hover {
+    scale: 1.05;
+    color: black;
+}
+
+.action_button:active {
+    scale: 0.95;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    right: 2rem;
+    height: 0;
+    top: 60px;
+    width: 300px;
+    background: rgba(255, 255, 255, 0);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+} 
+
+.dropdown_menu.open {
+    height: 260px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dropdown_menu .action_button {
+    width: 100%; 
+    display: flex; 
+    justify-content: center;
+}
+
+/* CONTACT US PAGE STYLING CODE */
+.container {
+    display: grid;
+    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 5px;
+    text-align: center;
+    font-size: 1.3rem;
+  }
+
+  .container div {
+    background-color: #5f5e5e;
+    aspect-ratio: 1;
+    border-style: solid;
+    border-radius: 0.6rem;
+    border-width: 2px;
+    border-color: black;
+  }
+
+/* PROJECT TILE STYLING CODE */
+.square {
+    color: black;
+    border-style: solid;
+    border-width: 3px;
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    margin: 0px 50px 10px 20px;
+    position: relative;
+  }
+  .child {
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+  }
+
+  .dot {
+    background: url("PlutoNotifyLOGO.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    border-radius: 100%;
+    height: 100px;
+    width: 200px;
+  }
+
+/* HERO */
+section#hero {
+    height: calc(100vh - 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+/* RESPONSIVE FORM */ 
+@media(max-width: 992px) {
+    .navbar1 .links,
+    .navbar1 .action_button {
+        display: none; 
+    }
+
+    .navbar1 .toggle_button {
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px) {
+    .dropdown_menu {
+        left: 2rem;
+        width: unset;
+    }
+}

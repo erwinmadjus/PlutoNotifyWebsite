@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF=8" />
+		<meta name = "viewport"
+		content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<title>Erwin - Looking for a Job</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="Backend.js" defer></script>
+	</head>
+
+    <body>
+        <header>
+            <div class = "navbar1">
+                <div class = "logo"><a href = "index.html">Pluto Notify</a></div>
+                <ul class = "links">
+                    <li><a href = "tutorials.html">Tutorials</a></li>
+                </ul>
+                <a href = "https://twitter.com/PlutoNotify" class = "action_button">Pluto Notify</a>
+                <div class = "toggle_button">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class = "dropdown_menu">
+                <li><a href = "AboutMe.html">About Me</a></li>
+                <li><a href = "Projects.html">Projects</a></li>
+                <li><a href = "Contact.html">Contact</a></li>
+                <li><a href = "DiscordCommunity.html">Pluto Notify</a></li>
+                <li><a href = "Blogs.html">Blog</a></li>
+                <li><a href = "https://www.linkedin.com/in/erwin-madjus-3a9074219/" class = "action_button">LinkedIn</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id = "hero">
+                <h1>Welcome to Pluto Notify!</h1>
+
+                <div class="dot"></div>
+                <p>
+                    Launched in February 2021 in collaboration with a close friend <br>
+                    from high school, Pluto Notify is more than just a project—it's a <br>
+                    journey into the world of coding, a gateway to sneakerhead paradise, <br>
+                    and a bridge to the Discord community. <br>
+                </p>
+                <p>
+                    Empowering Aspiring Coders: At its core, Pluto Notify is an educational <br>
+                    platform, dedicated to empowering individuals with the fundamentals of <br>
+                    web development. With a tech stack featuring HTML, CSS, and JavaScript, <br>
+                    we set out to provide a welcoming space for beginners, helping them <br>
+                    embark on their coding odyssey.<br>
+                </p>
+                <p>
+                    Unlocking Sneaker Secrets: Beyond coding, Pluto Notify is your <br>
+                    sneakerhead's best friend. We're all about keeping you in the loop when <br>
+                    it comes to the hottest and upcoming releases. Whether you're a fan of <br>
+                    Air Jordans or Yeezys, we're here to ensure you never miss out on your <br>
+                    dream kicks. <br>
+                </p>
+                <p>
+                    Joining the Discord Revolution: In the heart of our community lies a  <br>
+                    Shopify Monitor, powered by Discord Webhooks API, MongoDB, and a suite <br>
+                    of Command Line tools. This real-time marvel delivers instantaneous <br>
+                    product restock information, giving our users a whopping 50% boost <br>
+                    in securing their favorite sneakers. Say goodbye to FOMO; Pluto Notify <br>
+                    has your back.<br>
+                </p>
+                <p>
+                    Pluto Notify isn't just a project; it's a movement, a collective of <br>
+                    curious minds and sneaker enthusiasts. So, whether you're a newbie coder  <br>
+                    looking to create your own website or a seasoned sneakerhead, Pluto Notify <br>
+                    is your one-stop destination. Come for the coding wisdom, stay for the <br>
+                    sneaker insights, and thrive in our thriving Discord community. <br>
+                </p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_button')
+            const toggleBtnIcon = document.querySelector('.toggle_button i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+            
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+
+
+        </script>
+    </body>
+
+</html>

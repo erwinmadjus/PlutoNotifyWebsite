@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang = "en">
+	<head>
+		<meta charset = "UTF=8" />
+		<meta name = "viewport"
+		content = "width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" 
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" 
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<title>Erwin - Looking for a Job</title>
+		<link rel="stylesheet" href="style.css">
+		<script src="Backend.js" defer></script>
+	</head>
+
+    <body>
+        <header>
+            <div class = "navbar1">
+                <div class = "logo"><a href = "index.html">Pluto Notify</a></div>
+                <ul class = "links">
+                    <li><a href = "tutorials.html">Tutorials</a></li>
+                </ul>
+                <a href = "https://twitter.com/PlutoNotify" class = "action_button">Pluto Notify</a>
+                <div class = "toggle_button">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </div>
+
+            <div class = "dropdown_menu">
+                <li><a href = "index.html">Home</a></li>
+                <li><a href = "https://twitter.com/PlutoNotify" class = "action_button">Pluto Notify</a></li>
+            </div>
+        </header>
+
+        <main>
+            <section id = "hero">
+                <h1>Definitions</h1>
+                <p>
+                    containers: <br>
+                    class: <br>
+                </p>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_button')
+            const toggleBtnIcon = document.querySelector('.toggle_button i')
+            const dropDownMenu = document.querySelector('.dropdown_menu')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+            
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+
+
+        </script>
+    </body>
+
+</html>
